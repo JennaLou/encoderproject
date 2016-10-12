@@ -3,6 +3,11 @@ $("#inputText").keyup(function(e) {
   document.getElementById("textArea").innerHTML = inputText;
 });
 
+$("input[type='radio']").click(function() {
+  $("input:checked").prop('checked', false );
+  $(this).prop('checked', true );
+});
+
 var alphabet;
 
 65: "a",
