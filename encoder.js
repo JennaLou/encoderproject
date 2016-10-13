@@ -4,7 +4,7 @@ $("#inputText").keyup(function(e) {
 });
 
 $("input[type='radio']").click(function() {
-  $("input:checked").prop('checked', false );
+  $("input:checked").prop('checked', false);
   $(this).prop('checked', true );
 });
 
