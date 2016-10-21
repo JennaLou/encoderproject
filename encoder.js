@@ -10,50 +10,32 @@ $("input[type='radio']").click(function() {
   document.getElementById("textArea").textContent = "";
 });
 
-if ($("#inputText").keydown(function(e){
-var keyThing = e.keyCode;
-
-var bleh = redoneObject[keyThing];
-if($("input:checked").val()  == "echo") {
-   $("#textArea").append(redoneObject[keyThing]);
-}
-else if($("input:checked").val()  == "caesar") {
-   $("#textArea").append(caesarAlphabet[bleh]);
-}
-else if($("input:checked").val()  == "heiroglyphis") {
-    $("#textArea").append(heiroglyphicsThing[bleh]);
-}
-else if($("input:checked").val()  == "runes") {
-  $("#textArea").append(runeThibg[bleh]);
-   }
-
-}
-
-var caesarAlphabet = {
-  "a": "z",
-  "b": "a",
-  "c": "b",
-  "d": "c",
-  "e": "d",
-  "f": "e",
-  "g": "f",
-  "h": "g",
-  "i": "h",
-  "j": "i",
-  "k": "j",
-  "l": "k",
-  "m": "l",
-  "n": "m",
-  "o": "n",
-  "p": "o",
-  "q": "p",
-  "r": "q",
-  "s": "r",
-  "t": "s",
-  "u": "t",
-  "v": "u",
-  "w": "v",
-  "x": "w",
-  "y": "x",
-  "z": "y",
+var letters = {
+  32: " ",
+  65: "z",
+  66: "a",
+  67: "b",
+  68: "c",
+  69: "d",
+  70: "e",
+  71: "f",
+  72: "g",
+  73: "h",
+  74: "i",
+  75: "j",
+  76: "k",
+  77: "l",
+  78: "m",
+  79: "n",
+  80: "o",
+  81: "p",
+  82: "q",
+  83: "r",
+  84: "s",
+  85: "t",
+  86: "u",
+  87: "v",
+  88: "w",
+  89: "x",
+  90: "y",
 }
