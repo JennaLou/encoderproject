@@ -39,3 +39,8 @@ body {
   background-image: url("http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
   background-size: 100%;
 }
+
+div {
+  color: white;
+  font-family: 'Walter Turncoat', cursive;
+}
