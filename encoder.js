@@ -54,22 +54,9 @@ $("input[type='radio']").click(function(){
 $("#translationInputText").keydown(function(e){
   if(e.keyCode == 13){
     var message = $("#translationInputText").val();
-    messageArray = message.split("");
+    var messageArray = message.split("");
     for (var i = 0; i < messageArray.length; i++) {
       $("#translationArea").append(letters[messageArray[i].charCodeAt(0)-32 + 1]);
     }
   }
-});
-
-$('#translationInputText').keydown(function(e) {
-if(e.keyCode == 13) {
-  console.log("enter")
-  var message = $('#translationInputText').val();
-  var messageArray = message.split("");
-  for (var i= 0; i < messageArray.length; i++){
-    console.log("in loop")
-    $('#translationArea').append(letters[messageArray[i].charCodeAt(0)-32 + 1]);
-  }
-}
-
 });
