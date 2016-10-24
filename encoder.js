@@ -27,16 +27,12 @@ var letters = {
   89: "y",
   90: "z",
 }
-/**************************
-Input & Text Area Functions
-**************************/
+
 $("#inputArea").keydown(function(e){
   if ($("input:checked").val() == "echo") {
     $("#textArea").append(letters[e.keyCode]);
   }
-  /****************************
-  Caesar Cipher - Heiroglyphics
-  ****************************/
+
   else if ($("input:checked").val() == "caesarCipher") {
     $("#textArea").append(letters[e.keyCode - 1]);
   }
@@ -49,16 +45,12 @@ $("#inputArea").keydown(function(e){
     $("#textArea").append(htmlString);
   }
 });
-/*************
-Radio Function
-*************/
+
 $("input[type='radio']").click(function(){
   $("input:checked").prop('checked',false );
   $(this).prop('checked',true);
 });
-/********************************
-Translation Input & Text Function
-********************************/
+
 $("#translationInputText").keydown(function(e){
   if(e.keyCode == 13){
     var message = $("#translationInputText").val();
@@ -67,4 +59,17 @@ $("#translationInputText").keydown(function(e){
       $("#translationArea").append(letters[messageArray[i].charCodeAt(0)-32 + 1]);
     }
   }
+});
+
+$('#translationInputText').keydown(function(e) {
+if(e.keyCode == 13) {
+  console.log("enter")
+  var message = $('#translationInputText').val();
+  var messageArray = message.split("");
+  for (var i= 0; i < messageArray.length; i++){
+    console.log("in loop")
+    $('#translationArea').append(letters[messageArray[i].charCodeAt(0)-32 + 1]);
+  }
+}
+
 });
